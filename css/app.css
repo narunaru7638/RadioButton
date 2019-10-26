@@ -1,0 +1,54 @@
+.c-button-radio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 16px;
+  margin-bottom: 16px;
+}
+
+.c-button-radio__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+  right: 0;
+  bottom: 1px; //見た目上の高さを揃える用
+  left: 0;
+  height: 20px;
+  width: 20px;
+  vertical-align: -0.8rem;
+  transition:all .15s ease-out 0s;
+  cursor: pointer;
+  display: inline-block;
+  margin: .4rem;
+  outline: none;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
+.c-button-radio__input:checked {
+  border: 2px solid orange;
+}
+
+.c-button-radio__input:before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 3px;
+  transform: scale(0);
+  transition: all ease-out 250ms;
+}
+
+.c-button-radio__input:checked:before {
+  background: orange;
+  transform: scale(1);
+}
+
+
+.c-button-radio__label {
+  font-size: 14px;
+}
